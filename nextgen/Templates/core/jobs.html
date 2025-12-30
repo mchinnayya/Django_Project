@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="jobs-container">
+    <div class="internship-section">
+        <div class="job-details">
+            <h3>Internship [1 year]:</h3>
+            <ul>
+                <li>Python & DSA</li>
+                <li>Django</li>
+                <li>Django Rest Framework</li>
+                <li>Pytest</li>
+                <li>Two real time projects</li>
+                <li>MySql</li>
+                <li>GIT and GITHUB</li>
+                <li>Deployment</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="job-info">
+        <h3>Job Opportunity After Internship</h3>
+        <p>You need to work with real clients after the internship. At least two years you need to work, and you get:</p>
+        <ul class="benefits-list">
+            <li>PF (Provident Fund)</li>
+            <li>EPFO</li>
+            <li>UAN No</li>
+            <li>Form 16</li>
+            <li>Offer Letter</li>
+            <li>Relieving Letter</li>
+            <li>Experience Letter</li>
+            <li>Bank Account</li>
+            <li>Pay Slip</li>
+        </ul>
+    </div>
+</div>
+
+<section class="happy-clients">
+    <h2>Students Who Got Placement</h2>
+    <div class="slider">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="clients-container" id="clientsContainer">
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Got placed at Google with a package of 12 LPA. The training was exceptional!"</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Rahul Sharma</p>
+                <p class="placement-info">Package: 12 LPA | Company: Google</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Secured a position at Microsoft with 15 LPA. Grateful for the skills learned."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Priya Patel</p>
+                <p class="placement-info">Package: 15 LPA | Company: Microsoft</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Placed at Amazon with 14 LPA. The real-time projects helped a lot."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Arjun Kumar</p>
+                <p class="placement-info">Package: 14 LPA | Company: Amazon</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Got into Infosys with 8 LPA. The internship prepared me well."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Sneha Reddy</p>
+                <p class="placement-info">Package: 8 LPA | Company: Infosys</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Placed at TCS with 10 LPA. Excellent training and support."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Vikram Singh</p>
+                <p class="placement-info">Package: 10 LPA | Company: TCS</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Secured job at Flipkart with 13 LPA. Highly recommend this program."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Anjali Gupta</p>
+                <p class="placement-info">Package: 13 LPA | Company: Flipkart</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Got placed at Paytm with 11 LPA. The skills are top-notch."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Karan Mehta</p>
+                <p class="placement-info">Package: 11 LPA | Company: Paytm</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Placed at Zomato with 9 LPA. Real-time projects were game-changers."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Meera Joshi</p>
+                <p class="placement-info">Package: 9 LPA | Company: Zomato</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Secured position at Ola with 12 LPA. Fantastic experience."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Rohit Verma</p>
+                <p class="placement-info">Package: 12 LPA | Company: Ola</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Got into Swiggy with 10 LPA. The training was comprehensive."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Pooja Nair</p>
+                <p class="placement-info">Package: 10 LPA | Company: Swiggy</p>
+            </div>
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+{% endblock %}

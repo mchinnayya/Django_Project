@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NextGen Technologies</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=5">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">NGT</div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/jobs/">Jobs</a></li>
+            <li><a href="#footer">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+
+{% block content %}
+{% endblock %}
+
+{% if show_happy_clients %}
+<section class="happy-clients">
+    <h2>Happy Clients</h2>
+    <div class="slider">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="clients-container" id="clientsContainer">
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"NextGen Technologies provided excellent service and innovative solutions. Highly recommend!"</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- John Doe</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Outstanding work on our project. Professional and timely delivery."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Jane Smith</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Great team to work with. They exceeded our expectations."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Bob Johnson</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Fantastic results and great communication throughout."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Alice Brown</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Reliable and efficient. Will definitely work with them again."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Charlie Wilson</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Innovative approach to problem-solving. Impressed!"</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Diana Lee</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Top-notch quality and customer service."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Edward Davis</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Exceeded all our requirements. Highly satisfied."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Fiona Garcia</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Professional team with cutting-edge technology."</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- George Miller</p>
+            </div>
+            <div class="client-panel">
+                <div class="client-photo">👤</div>
+                <p>"Delivered on time and within budget. Excellent work!"</p>
+                <div class="stars">★★★★★</div>
+                <p class="client-name">- Helen Taylor</p>
+            </div>
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+</section>
+{% endif %}
+
+<footer id="footer">
+    <div class="footer-content">
+        <h3>Contact Us</h3>
+        <p><strong>Name:</strong> NextGen Technologies</p>
+        <p><strong>Phone:</strong> 7986297956</p>
+        <p><strong>Email:</strong> mchinnayya@gmail.com</p>
+        <p><strong>Address:</strong> Sankonatti, Athani, Karnataka - 591304</p>
+        <p>© 2025 NextGen Technologies</p>
+    </div>
+</footer>
+
+<script>
+let currentSlide = 0;
+const totalSlides = 10;
+const slideWidth = 250 + 20; // panel width + gap
+
+function moveSlide(direction) {
+    currentSlide += direction;
+    if (currentSlide < 0) currentSlide = totalSlides - 3; // show 3 at a time
+    if (currentSlide > totalSlides - 3) currentSlide = 0;
+    const container = document.getElementById('clientsContainer');
+    container.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+}
+</script>
+
+</body>
+</html>

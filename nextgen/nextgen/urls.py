@@ -1,5 +1,5 @@
 """
-URL configuration for Knowledge_Transfer project.
+URL configuration for nextgen project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -15,13 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from app1 import views
+from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('login/', views.login_page, name='login_page'),
-    path('forgot-password/', views.forgot_password, name='forgot_password'),
-    path('sign-up/', views.sign_up, name='sign_up'),
+    path('', include('core.urls')),
 ]

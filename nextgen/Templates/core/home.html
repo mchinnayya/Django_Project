@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Welcome to NextGen Technologies</h2>
+<p>We build next-generation IT solutions.</p>
+
+<section class="enquiry-form">
+    <h3>Enquiry Form</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ enquiry_form.as_p }}
+        <button type="submit">Submit Enquiry</button>
+    </form>
+</section>
+{% endblock %}

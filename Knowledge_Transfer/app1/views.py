@@ -8,6 +8,10 @@ import random
 import json
 
 def home(request):
+    return render(request, 'app1/home.html')
+    
+
+def login_page(request):
     if request.method == 'POST':
         mobile = request.POST.get('mobile')  # Use mobile number instead of username
         password = request.POST.get('password')
